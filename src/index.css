@@ -1,3 +1,95 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 22 163 74;
+    --color-secondary: 236 72 153;
+    --color-accent: 245 158 11;
+    --color-background: 255 255 255;
+    --color-text: 17 24 39;
+  }
+
+  body {
+    @apply bg-background text-text;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, 
+      Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors cursor-pointer;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90 active:bg-primary/80;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary/90 active:bg-secondary/80;
+  }
+
+  .btn-outline {
+    @apply border border-gray-300 hover:bg-gray-100 active:bg-gray-200;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow;
+  }
+
+  .container-custom {
+    @apply px-4 md:px-6 mx-auto max-w-7xl;
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    @apply bg-green-600;
+  }
+  
+  .bg-secondary {
+    @apply bg-pink-500;
+  }
+  
+  .bg-accent {
+    @apply bg-amber-500;
+  }
+  
+  .bg-background {
+    @apply bg-white;
+  }
+  
+  .text-primary {
+    @apply text-green-600;
+  }
+  
+  .text-secondary {
+    @apply text-pink-500;
+  }
+  
+  .text-accent {
+    @apply text-amber-500;
+  }
+  
+  .text-text {
+    @apply text-gray-900;
+  }
+}
